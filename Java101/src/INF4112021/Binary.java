@@ -8,8 +8,12 @@ public class Binary {
         System.out.println(k<<1) ; // 1248=15 24816=30
         k= 3;
         System.out.println(k>>>1);
-        k= -3;
-        System.out.println(k>>1);
+        k= -900;
+        System.out.println(k>>2);
+        k= -900;
+        System.out.println(k>>>1);
+        k= 900;
+        System.out.println(k>>>1);
 
     }
 }
