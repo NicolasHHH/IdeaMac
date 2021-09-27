@@ -2,14 +2,16 @@ package INF4112021;
 
 public class Union_find {
     private int[] link;
-    private int[] rank;
+    private int[] rank; // uniquement pour les représentants
 
     Union_find(int n){
         if( n<0 ) throw new IllegalArgumentException();
+
         this.link = new int[n];
         for( int i = 0; i<n;i++){
             this.link[i] = i; // { 1, 2, 3, 4, ... }
         }
+        // initialisation à 0;
         this.rank = new int[n];
     }
 
@@ -26,6 +28,10 @@ public class Union_find {
         return r;
     }
     // la prochaine fois on appelle find(p), on trouvra r associé directement
+
+    // au lieu de choisir arbitairement on utilise la méthode "union pondérée"
+    // rang = longueur maximale des chemins
+
 
     void union(int i, int j){
         int ri = this.find(i);
