@@ -73,6 +73,7 @@ class USet {
         this.finite = ! this.finite;
     }
     public static void main(String[] args){
+        // test
         int[] a1 = {1,2,3};
         USet u1 = new USet(a1,true);
         u1.afficher();
